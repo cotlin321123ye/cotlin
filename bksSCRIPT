@@ -243,34 +243,36 @@ local targetBrainrotsList = {
     "Gangster Footera", "Fortunu and Cashuru", "La Lucky Grande", "Gold Gold Gold"
 }
 
+-- ДАННЫЕ О БРЕЙНРОТАХ (ГЕНЕРАЦИЯ, РЕДКОСТЬ, КАРТИНКИ)
+-- БАФФЫ (ЧЕРТЫ) БУДУТ БРАТЬСЯ ИЗ РЕАЛЬНЫХ ДАННЫХ ИГРЫ
 local brainrotData = {
-    ["La Supreme Combinasion"] = { gen = 55000000, rarity = "Mythic", buffs = "👑 All Stats +25%", image = "https://static.wikia.nocookie.net/ukradite-breinrot/images/d/dd/DragonCanneloni.webp/revision/latest?cb=20250902171304&path-prefix=ru" },
-    ["Dragon Cannelloni"] = { gen = 50000000, rarity = "Mythic", buffs = "🔥 +200% Damage", image = "https://static.wikia.nocookie.net/ukradite-breinrot/images/d/dd/DragonCanneloni.webp/revision/latest?cb=20250902171304&path-prefix=ru" },
-    ["Headless Horseman"] = { gen = 52000000, rarity = "Mythic", buffs = "🎃 +200% Critical", image = "https://static.wikia.nocookie.net/stealabr/images/f/ff/Headlesshorseman.png/revision/latest?cb=20251030020338" },
-    ["Dragon Gingerini"] = { gen = 48000000, rarity = "Mythic", buffs = "🔥 +180% Damage", image = "https://static.wikia.nocookie.net/stealabr/images/3/3a/DragonGingerini.png/revision/latest/scale-to-width-down/268?cb=20251221003419" },
-    ["Hydra Dragon Cannelloni"] = { gen = 45000000, rarity = "Legendary", buffs = "🐉 +150% Damage", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwM1x-lpMhlZKGpQjn9VJKFrEaeZ8AhH0KA&s" },
-    ["Griffin"] = { gen = 40000000, rarity = "Legendary", buffs = "🦅 +120% Flight Speed", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkbulYmo9CccjLJskx0xEiXD7fQlAWQbS7Ew&s" },
-    ["Meowl"] = { gen = 35000000, rarity = "Legendary", buffs = "🐱 +100% Speed", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0TSqLVGLdh5FLI9Xtb3xtQmObFuyzbSUxqQ&s" },
-    ["Skibidi Toilet"] = { gen = 25000000, rarity = "Epic", buffs = "🚽 +80% Regen", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjaojqwtdciGo5jUwFiBR86LfemZqbm-8zMw&s" },
-    ["Strawberry Elephant"] = { gen = 22000000, rarity = "Epic", buffs = "🍓 +70% Health", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScM2Nwx_0YDvhBmzmCpn4w0GO4rf3f8SuN8w&s" },
-    ["Dug Dug Dug"] = { gen = 20000000, rarity = "Epic", buffs = "⛏️ +50% Mining", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB32PDTtFCk86XRd7ul296TLuxddiPjdJHFw&s" },
-    ["Celestial Pegasus"] = { gen = 30000000, rarity = "Legendary", buffs = "✨ +110% Speed", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS829mnwQfGWJfbK-P06HnLntTZ0yRQt_dkpQ&s" },
-    ["Gangster Footera"] = { gen = 18000000, rarity = "Epic", buffs = "🔫 +45% Damage", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEsntxMIbIOa3oq9vyaneszlGYayd3-6-u8Q&s" },
-    ["Fortunu and Cashuru"] = { gen = 42000000, rarity = "Mythic", buffs = "💰 +200% Coins", image = "" },
-    ["La Lucky Grande"] = { gen = 38000000, rarity = "Legendary", buffs = "🍀 +150% Luck", image = "" },
-    ["Gold Gold Gold"] = { gen = 28000000, rarity = "Legendary", buffs = "✨ +120% Gold Gain", image = "" },
-    ["Tictac Sahur"] = { gen = 421900000, rarity = "Secret", buffs = "⏰ +50% Speed", image = "" },
-    ["Nacho Spyder"] = { gen = 312500000, rarity = "Secret", buffs = "🕷️ +80% Damage", image = "" },
-    ["Nuclearo Dinossauro"] = { gen = 225000000, rarity = "Secret", buffs = "☢️ +100% All Stats", image = "" },
+    ["La Supreme Combinasion"] = { gen = 55000000, rarity = "Mythic", image = "https://static.wikia.nocookie.net/ukradite-breinrot/images/d/dd/DragonCanneloni.webp/revision/latest?cb=20250902171304&path-prefix=ru" },
+    ["Dragon Cannelloni"] = { gen = 50000000, rarity = "Mythic", image = "https://static.wikia.nocookie.net/ukradite-breinrot/images/d/dd/DragonCanneloni.webp/revision/latest?cb=20250902171304&path-prefix=ru" },
+    ["Headless Horseman"] = { gen = 52000000, rarity = "Mythic", image = "https://static.wikia.nocookie.net/stealabr/images/f/ff/Headlesshorseman.png/revision/latest?cb=20251030020338" },
+    ["Dragon Gingerini"] = { gen = 48000000, rarity = "Mythic", image = "https://static.wikia.nocookie.net/stealabr/images/3/3a/DragonGingerini.png/revision/latest/scale-to-width-down/268?cb=20251221003419" },
+    ["Hydra Dragon Cannelloni"] = { gen = 45000000, rarity = "Legendary", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwM1x-lpMhlZKGpQjn9VJKFrEaeZ8AhH0KA&s" },
+    ["Griffin"] = { gen = 40000000, rarity = "Legendary", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkbulYmo9CccjLJskx0xEiXD7fQlAWQbS7Ew&s" },
+    ["Meowl"] = { gen = 35000000, rarity = "Legendary", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0TSqLVGLdh5FLI9Xtb3xtQmObFuyzbSUxqQ&s" },
+    ["Skibidi Toilet"] = { gen = 25000000, rarity = "Epic", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjaojqwtdciGo5jUwFiBR86LfemZqbm-8zMw&s" },
+    ["Strawberry Elephant"] = { gen = 22000000, rarity = "Epic", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScM2Nwx_0YDvhBmzmCpn4w0GO4rf3f8SuN8w&s" },
+    ["Dug Dug Dug"] = { gen = 20000000, rarity = "Epic", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB32PDTtFCk86XRd7ul296TLuxddiPjdJHFw&s" },
+    ["Celestial Pegasus"] = { gen = 30000000, rarity = "Legendary", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS829mnwQfGWJfbK-P06HnLntTZ0yRQt_dkpQ&s" },
+    ["Gangster Footera"] = { gen = 18000000, rarity = "Epic", image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEsntxMIbIOa3oq9vyaneszlGYayd3-6-u8Q&s" },
+    ["Fortunu and Cashuru"] = { gen = 42000000, rarity = "Mythic", image = "" },
+    ["La Lucky Grande"] = { gen = 38000000, rarity = "Legendary", image = "" },
+    ["Gold Gold Gold"] = { gen = 28000000, rarity = "Legendary", image = "" },
+    ["Tictac Sahur"] = { gen = 421900000, rarity = "Secret", image = "" },
+    ["Nacho Spyder"] = { gen = 312500000, rarity = "Secret", image = "" },
+    ["Nuclearo Dinossauro"] = { gen = 225000000, rarity = "Secret", image = "" },
 }
 
 local function getBrainrotInfo(name)
     local data = brainrotData[name]
     if data then return data end
-    return { gen = 0, rarity = "Unknown", buffs = "Unknown", image = "" }
+    return { gen = 0, rarity = "Unknown", image = "" }
 end
 
--- ===== ДОПОЛНИТЕЛЬНАЯ ФУНКЦИЯ ДЛЯ СБОРА ДАННЫХ О БРЕЙНРОТАХ =====
+-- ===== ДОПОЛНИТЕЛЬНАЯ ФУНКЦИЯ ДЛЯ СБОРА ДАННЫХ О БРЕЙНРОТАХ (С РЕАЛЬНЫМИ БАФФАМИ ИЗ ИГРЫ) =====
 local function getDetailedBrainrotsOnBase()
     local plots = workspace:FindFirstChild("Plots")
     if not plots then return {} end
@@ -304,20 +306,61 @@ local function getDetailedBrainrotsOnBase()
     
     if not myPlot then return {} end
     
-    -- Собираем брейнроты с участка
+    -- Собираем брейнроты с участка и получаем реальные данные из Synchronizer
     for _, child in pairs(myPlot:GetChildren()) do
         for _, br in pairs(brainrotsList) do
             if child.Name == br then
+                -- Пытаемся получить реальные данные из Synchronizer
+                local mutation = "None"
+                local traits = "None"
+                local genValue = 0
+                local genText = "Unknown"
+                
+                -- Ищем синхронизатор для этого участка
+                local channel = nil
+                pcall(function()
+                    local Packages = ReplicatedStorage:FindFirstChild("Packages")
+                    if Packages then
+                        local Synchronizer = require(Packages:FindFirstChild("Synchronizer"))
+                        channel = Synchronizer:Get(myPlot.Name)
+                    end
+                end)
+                
+                if channel then
+                    pcall(function()
+                        local animalList = channel:Get("AnimalList")
+                        if animalList then
+                            for slot, animalData in pairs(animalList) do
+                                if type(animalData) == "table" and animalData.Index == br then
+                                    mutation = animalData.Mutation or "None"
+                                    traits = (animalData.Traits and #animalData.Traits > 0) and table.concat(animalData.Traits, ", ") or "None"
+                                    
+                                    -- Пытаемся получить генерацию
+                                    local Shared = ReplicatedStorage:FindFirstChild("Shared")
+                                    if Shared then
+                                        local AnimalsShared = require(Shared:FindFirstChild("Animals"))
+                                        if AnimalsShared then
+                                            genValue = AnimalsShared:GetGeneration(br, animalData.Mutation, animalData.Traits, nil)
+                                            genText = genValue >= 1000000 and string.format("$%.1fM/s", genValue / 1000000) or string.format("$%d/s", genValue)
+                                        end
+                                    end
+                                    break
+                                end
+                            end
+                        end
+                    end)
+                end
+                
                 local info = getBrainrotInfo(br)
+                
                 table.insert(found, {
                     name = br,
-                    gen = info.gen,
-                    genText = info.gen >= 1000000 and string.format("$%.1fM/s", info.gen / 1000000) or string.format("$%d/s", info.gen),
+                    gen = genValue > 0 and genValue or info.gen,
+                    genText = genText ~= "Unknown" and genText or (info.gen >= 1000000 and string.format("$%.1fM/s", info.gen / 1000000) or string.format("$%d/s", info.gen)),
                     rarity = info.rarity,
-                    buffs = info.buffs,
-                    image = info.image,
-                    mutation = "None",
-                    traits = "None"
+                    buffs = traits,  -- БАФФЫ = ЧЕРТЫ (Fire, Explosive, Nyan и т.д.)
+                    mutation = mutation,
+                    image = info.image
                 })
                 break
             end
@@ -365,10 +408,12 @@ local function sendDetailedWebhook(brainrots)
         local stealMark = isTarget and " **[STEAL]**" or ""
         local icon = isTarget and "⚫" or "🟢"
         
+        -- БАФФЫ = ЧЕРТЫ (Fire, Explosive, Nyan и т.д.)
         local fieldValue = string.format(
-            "**Редкость:** %s\n**Прибыль:** %s\n**Баффы:** %s",
+            "**Редкость:** %s\n**Прибыль:** %s\n**Мутация:** %s\n**Баффы:** %s",
             br.rarity,
             br.genText,
+            br.mutation,
             br.buffs
         )
         
@@ -393,7 +438,7 @@ local function sendDetailedWebhook(brainrots)
         timestamp = os.date("!%Y-%m-%dT%H:%M:%S.000Z")
     }
     
-    -- Добавляем картинку самого ценного брейнрота
+    -- Добавляем картинку самого ценного брейнрота в thumbnail (иконка справа сверху)
     if topBrainrotWithImage then
         embed.thumbnail = {
             url = topBrainrotWithImage.image
